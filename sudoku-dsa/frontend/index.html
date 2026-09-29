@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku - Stack &amp; Linked List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Sudoku</h1>
+      <div class="bar">
+        <select id="level">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="new">New game</button>
+        <span id="timer">00:00</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section>
+        <div id="board" role="grid" aria-label="Sudoku board"></div>
+        <div id="pad"></div>
+        <div class="actions">
+          <button id="undo">Undo</button>
+          <button id="redo">Redo</button>
+          <button id="hint">Hint</button>
+          <button id="check">Check</button>
+          <button id="solve" class="danger">Give up</button>
+        </div>
+        <p id="msg" aria-live="polite"></p>
+      </section>
+
+      <aside>
+        <h2>Stats</h2>
+        <dl id="stats"></dl>
+        <h2>Analysis</h2>
+        <dl id="analysis"><dd class="muted">Click "Analyse" to load</dd></dl>
+        <button id="analyse">Analyse</button>
+        <h2>Move log <small>(linked list)</small></h2>
+        <ol id="log"></ol>
+      </aside>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
